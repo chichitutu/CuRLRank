@@ -329,6 +329,6 @@ The final reranking results will be saved in: `./evaluation/data/reranking/`
 
 ## 5. Performance 🏆
 
-![image-20260531145802999](.\Images\bright_perfermance.png)
+![Bright Performance](Images/bright_perfermance.png)
 
-![image-20260531145821676](.\Images\r2med_perfermance.png)
+![R2Med Performance](Images/r2med_perfermance.png)
