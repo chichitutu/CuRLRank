@@ -65,7 +65,7 @@ pip install beir
 
 ### 2.1 Download datasets 🗂️
 
-Download all datasets from [CuRLRank_data](https://huggingface.co/datasets/chichitutu/CuRLRank/tree/main?utm_source=chatgpt.com), where:
+Download all datasets from [CuRLRank_data](https://huggingface.co/datasets/chichitutu/CuRLRank/tree/main), where:
 
 - **`deepseek-r1_sft.json`** is used for the first-stage Supervised Fine-Tuning (SFT).
 - **`train.parquet`** and **`val.parquet`** are used for the second-stage Adaptive Curriculum Reinforcement Learning (CuRL).
@@ -97,8 +97,8 @@ Specifically:
 
 Download the model from either:
 
-- [CuRLRank-4B (Hugging Face)](https://huggingface.co/chichitutu/CuRLRank-4B/tree/main?utm_source=chatgpt.com)
-- [CuRLRank-4B (ModelScope)](https://modelscope.cn/models/chichitutu/CuRLRank-4B/files?utm_source=chatgpt.com)
+- [CuRLRank-4B (Hugging Face)](https://huggingface.co/chichitutu/CuRLRank-4B/tree/main)
+- [CuRLRank-4B (ModelScope)](https://modelscope.cn/models/chichitutu/CuRLRank-4B/files)
 
 Then place the downloaded model files under the following directory:
 
@@ -255,8 +255,6 @@ nohup bash train_grpo.sh > train_grpo.log 2>&1 &
 
 ## 4. Evaluation 📏
 
-直接用下面这版即可，适合直接放到 README 中：
-
 During the evaluation stage, you only need to modify the file `./evaluation/scripts/CuRLRank-4B.sh`:
 
 ```bash
@@ -331,6 +329,6 @@ The final reranking results will be saved in: `./evaluation/data/reranking/`
 
 ## 5. Performance 🏆
 
-![image-20260531145802999](C:\Users\chichi\AppData\Roaming\Typora\typora-user-images\image-20260531145802999.png)
+![image-20260531145802999](.\Images\bright_perfermance.png)
 
-![image-20260531145821676](C:\Users\chichi\AppData\Roaming\Typora\typora-user-images\image-20260531145821676.png)
+![image-20260531145821676](.\Images\r2med_perfermance.png)
