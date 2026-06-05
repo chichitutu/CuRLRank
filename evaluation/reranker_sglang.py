@@ -75,7 +75,8 @@ class SGLangReasoningLLMReranker:
         if self.enable_full_parallelism:
             sampling_params["n"] = 1
 
-        
+        reranking_scores = []
+        valid_flags = []
         running_time, completion_tokens = 0.0, 0.0
         num_batches = (len(query_docs_pairs) + self.batch_size - 1) // self.batch_size
         for i in tqdm(range(0, len(query_docs_pairs), self.batch_size), desc="Reasoning Reranking", total=num_batches):
@@ -139,9 +140,6 @@ class SGLangReasoningLLMReranker:
             running_time += time.time() - time_start
 
             ############ extract_scores ############
-            reranking_scores = []
-            valid_flags = []
-
             assert len(outputs) == len(batch_prompts) * self.sample_k, (
                 f"Expected {len(batch_prompts) * self.sample_k} outputs, "
                 f"but got {len(outputs)} outputs."
