@@ -59,6 +59,10 @@ pip install ftfy
 pip install beir
 ```
 
+**Note:** The automatic installation of `pytrec_eval` may fail because of network connectivity issues. In such cases, please follow the tutorial below to install it manually:
+
+[pytrec_eval install tutorial](https://blog.csdn.net/xiaodingdang1022/article/details/141434030)
+
 **Note:** These environments are independent of each other. If you only need to run evaluations, simply create an environment with Python 3.11 and PyTorch 2.8.0, then install the evaluation dependencies listed above. There is no need to install the packages required for supervised fine-tuning or adaptive curriculum reinforcement learning.
 
 ## 2. Datasets and models 🧠
