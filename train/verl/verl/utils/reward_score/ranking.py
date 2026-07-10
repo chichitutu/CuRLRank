@@ -117,8 +117,8 @@ def extract_scores(text: str, expected_num: int):
 def compute_final_reward(
     pred_scores: List[float],
     labels: List[int],
-    hard_neg_scale: float = 1.0,
-    temperature: float = 20.0,
+    scaling_factor: float = 0.05,
+    temperature_coefficient: float = 20.0,
 ):
 
     scores = np.asarray(pred_scores, dtype=np.float32)
@@ -133,8 +133,7 @@ def compute_final_reward(
     # -----------------------
     # 1. negative weighting (FIXED) neg_logits取值范围[0,1]左右
     # -----------------------
-    neg_logits = neg_scores / 20.0
-    neg_logits = neg_logits * hard_neg_scale
+    neg_logits = scaling_factor * neg_scores
 
     neg_logits -= np.max(neg_logits)  # stability
     neg_weights = np.exp(neg_logits)
@@ -143,7 +142,7 @@ def compute_final_reward(
     # -----------------------
     # 2. pairwise diff (你原来的设计保留)
     # -----------------------
-    diff = (pos_scores[:, None] - neg_scores[None, :]) / temperature
+    diff = (pos_scores[:, None] - neg_scores[None, :]) / temperature_coefficient
     pair_prob = 1.0 / (1.0 + np.exp(-diff))
 
     # -----------------------

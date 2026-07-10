@@ -158,7 +158,7 @@ class ReasoningEvalReranker(EvalReranker):
                         continue
                     # smoothing score
                     old_score = doc["score"]
-                    doc["score"] = (new_score + (round_number - 1) * old_score) / round_number + 5
+                    doc["score"] = (new_score + (round_number - 1) * old_score) / round_number
         
         reranker_cache = defaultdict(str)
         round_number, min_window, default_score, step = 1, 10, 60.0, WINDOW_SIZE
@@ -181,8 +181,6 @@ class ReasoningEvalReranker(EvalReranker):
             reranker_cache[str(round_number)] = round_cache
             
             mean_num_above = (rank_end - rank_start) / 2
-            if round_number == 1:
-                mean_num_above += 10
             rank_end = min(((int(mean_num_above) + step - 1) // step) * step, rank_end)
             round_number += 1  
         avg_completion_tokens = all_completion_tokens / (round_number - 1)
