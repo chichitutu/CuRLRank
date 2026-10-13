@@ -1,13 +1,15 @@
-# CuRLRank: Curriculum-Guided Reinforcement Learning for Reasoning-Intensive Reranking
+# CuRLRank: Adaptive Curriculum Reinforcement Learning for Reasoning-Intensive Reranking
 
 [![Paper Status](https://img.shields.io/badge/Status-EMNLP--2026--Submission-orange)](https://github.com/)
 [![Python](https://img.shields.io/badge/Python-3.11.15-blue)](https://www.python.org/)
 [![CUDA](https://img.shields.io/badge/CUDA-12.4-green)](https://developer.nvidia.com/cuda-toolkit)
 
-This repository contains the official implementation of the paper **"CuRLRank: Curriculum-Guided Reinforcement Learning for Reasoning-Intensive Reranking"**. 
+This repository contains the official implementation of the paper **"CuRLRank: Adaptive Curriculum Reinforcement Learning for Reasoning-Intensive Reranking"**. 
 
-> [!NOTE]
-> We have released key experimental code. The full codebase will be released upon acceptance to **EMNLP 2026**.
+> > [!NOTE]
+> We have released key experimental code. The full codebase will be released soon.
+>
+> **Update (October 13, 2026):** Our paper has been accepted to the **EMNLP 2026 Main Conference**.
 
 ## 1. Environments 🛠️
 
