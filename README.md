@@ -1,6 +1,7 @@
 # CuRLRank: Adaptive Curriculum Reinforcement Learning for Reasoning-Intensive Reranking
 
-[![Paper Status](https://img.shields.io/badge/Status-EMNLP--2026--Submission-orange)](https://github.com/)
+
+[![Paper Status](https://img.shields.io/badge/Status-EMNLP%202026%20Main%20Accepted-brightgreen)](https://github.com/)
 [![Python](https://img.shields.io/badge/Python-3.11.15-blue)](https://www.python.org/)
 [![CUDA](https://img.shields.io/badge/CUDA-12.4-green)](https://developer.nvidia.com/cuda-toolkit)
 
