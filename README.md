@@ -339,3 +339,32 @@ The final reranking results will be saved in: `./evaluation/data/reranking/`
 ![Bright Performance](assets/bright_perfermance.png)
 
 ![R2Med Performance](assets/r2med_perfermance.png)
+
+## 6. Citation 📚
+If you find our work useful, please consider citing our paper:
+
+```bibtex
+@inproceedings{kang-etal-2026-curlrank,
+    title = "{C}u{RLR}ank: Adaptive Curriculum Reinforcement Learning for Reasoning-Intensive Reranking",
+    author = "Kang, Xin  and
+      Zhao, Yunxiao  and
+      Zhang, Jiayang  and
+      Li, Juncai  and
+      Yan, Zhichao  and
+      Han, XiaoQi  and
+      Li, Ru  and
+      Zhang, Delvin Ce",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Junyi Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.1868/",
+    doi = "10.18653/2026.emnlp-main.1868",
+    pages = "42563--42592",
+    ISBN = "979-8-89176-459-0"
+}
